@@ -1,12 +1,40 @@
-# Taller Practico
+# Taller Práctico
 
 ## Introduction
 
 El objetivo de esta practica es comenzar a utilizar python con mongo, para ello usarermos una libreria llamada pymongo.
-Para ello importaremos datos mock sobre usuarios de una aplicacion. Lo podeis encontrar en el fichero MOCK_DATA.json
+Para ello importaremos datos mock sobre usuarios de una aplicación. Lo podeis encontrar en el fichero [MOCK_DATA.json](MOCK_DATA.json)
 
-### Apartado 1 
-	Insertar los siguientes objetos en la base de datos
+
+### Apartado 0
+Preparando en entorno
+```bash
+
+python3 -m venv myvenv
+pip install pymongo
+pip install -r requirements.txt
+```
+
+
+### Apartado 1
+	Importar los datos a un base datos llamada upsa1 en la collecion users
+	Se puede usar mongoimport o este fragmento de código python (recomiendo usar el código para aprender a importar desde python)
+	
+```python
+MONGO_HOST = "127.0.0.1:27017"
+def import_json(database, collection):
+    client = MongoClient(MONGO_HOST)
+    db = client[database]
+    with open('MOCK_DATA.json') as f:
+        file_data = json.load(f)
+        db.get_collection(collection).insert_many(file_data)
+
+```
+
+### Apartado 2 
+Insertar los siguientes objetos en la base de datos usando python
+Podeis consultar el fichero [mongo_utils.py](mongo_utils.py), donde podeis ver un ejemplo básico de cada tipo de operación.
+	
 	{
 	"first_name" : "Manuel",
 	"last_name" : "Gomez",
@@ -41,10 +69,10 @@ Para ello importaremos datos mock sobre usuarios de una aplicacion. Lo podeis en
 	"University" : "UPSA"
 	}
 
-Podeis consultar el fichero [mongo_utils.py](mongo_utils.py), donde podeis ver un ejemplo básico de cada tipo de opertación.
 
 
-## How can I deploy and test each integration ?
+
+### Apartado 3
 
 In this repo you can find a Makefile to help you to deploy and test in local.
 
