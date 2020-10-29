@@ -91,5 +91,7 @@ db.get_collection(collection).count_documents(query)
 Actualizar la ip de un usuario nombre "Jervis"" y actualizarlo con "109.150.230.156/24" and comprobarlo haciendo una query.
 
 
+### Apartado 5
+Realizar un map reduce q de la siguiente salida para ello podeis consultar: [Map Reduce PyMongo](https://api.mongodb.com/python/2.0/examples/map_reduce.html)
 
  
