@@ -5,6 +5,7 @@
 El objetivo de esta practica es comenzar a utilizar python con mongo, para ello usarermos una libreria llamada pymongo.
 Para ello importaremos datos mock sobre usuarios de una aplicación. Lo podeis encontrar en el fichero [MOCK_DATA.json](MOCK_DATA.json)
 
+Informacion UTIL para la práctica : [pymongo docs](https://api.mongodb.com/python/current/tutorial.html#making-a-connection-with-mongoclient)
 
 ### Apartado 0
 Preparando en entorno
@@ -32,9 +33,12 @@ def import_json(database, collection):
 ```
 
 ### Apartado 2 
-Insertar los siguientes objetos en la base de datos usando python
+Insertar los siguientes objetos en la base de datos usando python. Para ello podeis crear una lista q contenga los datos
+
 Podeis consultar el fichero [mongo_utils.py](mongo_utils.py), donde podeis ver un ejemplo básico de cada tipo de operación.
 	
+```python
+	data =[
 	{
 	"first_name" : "Manuel",
 	"last_name" : "Gomez",
@@ -45,7 +49,7 @@ Podeis consultar el fichero [mongo_utils.py](mongo_utils.py), donde podeis ver u
 	"Altitude" : -3.41144,
 	"City" : "Madrid",
 	"University" : "Upsa"
-	}
+	},
 	{
 	"first_name" : "Lucia",
 	"last_name" : "Sanchez",
@@ -56,7 +60,7 @@ Podeis consultar el fichero [mongo_utils.py](mongo_utils.py), donde podeis ver u
 	"Altitude" : -2.41144,
 	"City" : "Salamanca",
 	"University" : "UPSA"
-	}
+	},
 	{
 	"first_name" : "Sergio",
 	"last_name" : "Suarez",
@@ -67,95 +71,25 @@ Podeis consultar el fichero [mongo_utils.py](mongo_utils.py), donde podeis ver u
 	"Altitude" : -2.61144,
 	"City" : "Salamanca",
 	"University" : "UPSA"
-	}
+	}]
+```
 
 
 
 
 ### Apartado 3
+Hacer una query q me saque por consola el porcentaje de usuarios por género
+Podeis consultar el fichero [mongo_utils.py](mongo_utils.py), donde podeis ver un ejemplo básico de cada tipo de operación.
 
-In this repo you can find a Makefile to help you to deploy and test in local.
-
-* **ABS integration**:
-Basicly you can launch, this command deploy gater, dormer, mongodb,abs-dapter, abs-speedster and also
-provision all the platform to launch the e2e tests. For more details see at Makefile and docker-compose used there.
-	
-	```bash
-	make deploy_abs
-	```
-
-	To launch the tests:
-	
-	```bash
-	make test-abs
-	```
-
-* **Sipr integration**:
-Basicly you can launch, this command deploy gater, dormer, mongodb,sipr-dapter, spir-speedster and also
-provision all the platform to launch the e2e tests. For more details see at Makefile and docker-compose used there.
-	
-	```bash
-	make deploy_sipr
-	```
-
-	To launch the tests:
-	
-	```bash
-	make test-sipr
-	```
-
-* **Nucleus Batcher**:
-Basicly you can launch, this command deploy all SD components needed to launch the tests and provision. 
-For more details see at Makefile and docker-compose used there.
-	
-	```bash
-	make deploy_nucleus
-	```
-
-	To launch the tests:
-	
-	```bash
-	make test-nucleus
-	```
-
-* **Reuse Batcher**:
-Basicly you can launch, this command deploy all SD components needed to launch the tests and provision. 
-For more details see at Makefile and docker-compose used there.
-	
-	```bash
-	make deploy_reuse
-	```
-
-	To launch the tests:
-
-	```bash
-	make test-reuse
-	```
-* **Netcracker**:
-Basicly you can launch, this command deploy all SD components needed to launch the tests and provision. 
-For more details see at Makefile and docker-compose used there.
-	
-	```bash
-	make deploy_netcracker
-	```
-
-	To launch the tests:
-
-	```bash
-	make test-netcracker
+Tip:
+```python
+db.get_collection(collection).count_documents(query)
+```
 
 
-* **Urm-filter-cron**:
-Basicly you can launch, this command deploy all SD components needed to launch the tests and provision. 
-For more details see at Makefile and docker-compose used there.
-	
-	```bash
-	make deploy_cron
-	```
+### Apartado 4
+Actualizar la ip de un usuario nombre "Jervis"" y actualizarlo con "109.150.230.156/24" and comprobarlo haciendo una query.
 
-	To launch the tests:
 
-	```bash
-	make test-netcracker
 
  

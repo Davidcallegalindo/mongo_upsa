@@ -13,7 +13,7 @@ def add_restaurant(mongo_host, data):
     db = client['test']
     inserted_id = db.my_restaurants.insert_one(data).inserted_id
     client.close()
-    print ("ID del restaurante creado ={}".format(inserted_id))
+    print("ID del restaurante creado ={}".format(inserted_id))
     return inserted_id
 
 
