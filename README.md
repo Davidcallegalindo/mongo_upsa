@@ -93,5 +93,9 @@ Actualizar la ip de un usuario nombre "Jervis"" y actualizarlo con "109.150.230.
 
 ### Apartado 5
 Realizar un map reduce q de la siguiente salida para ello podeis consultar: [Map Reduce PyMongo](https://api.mongodb.com/python/2.0/examples/map_reduce.html)
+```bash
+{'_id': 'Female', 'value': 19.0}
+{'_id': 'Male', 'value': 14.0}
+```
 
  
