@@ -8,7 +8,7 @@ Para ello importaremos datos mock sobre usuarios de una aplicación. Lo podeis e
 Informacion UTIL para la práctica : [pymongo docs](https://api.mongodb.com/python/current/tutorial.html#making-a-connection-with-mongoclient)
 
 ### Apartado 0
-Preparando en entorno
+Preparando el entorno
 ```bash
 
 python3 -m venv myvenv
