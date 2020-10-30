@@ -92,7 +92,7 @@ Actualizar la ip de un usuario nombre "Jervis"" y actualizarlo con "109.150.230.
 
 
 ## Apartado 5
-Buscar y sacar por consola los usuarios cuya latitud se mayor o igual que ﻿39.1457699 y la altitud menor que 37.114895
+Buscar y sacar por consola los usuarios cuya latitud se mayor o igual que ﻿30.00 y la altitud menor que 10.00
 
 ## Apartado 6
 
@@ -102,7 +102,7 @@ Tip:
 db.get_collection(collection).delete_many(query)
 ```
 
-### Apartado 6
+### Apartado 7
 Realizar un map reduce q de la siguiente salida para ello podeis consultar: [Map Reduce PyMongo](https://api.mongodb.com/python/2.0/examples/map_reduce.html)
 ```bash
 {'_id': 'Female', 'value': 19.0}
