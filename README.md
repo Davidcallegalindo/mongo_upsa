@@ -13,6 +13,7 @@ Preparando el entorno
 
 python3 -m venv myvenv
 pip install pymongo
+or
 pip install -r requirements.txt
 ```
 
