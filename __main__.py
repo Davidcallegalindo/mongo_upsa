@@ -30,7 +30,7 @@ DATA_TEST_3 = {
 }
 
 
-MONGO_HOST = "127.0.0.1:37017"
+MONGO_HOST = "127.0.0.1:27017"
 
 id_rest = mongo_utils.add_restaurant(MONGO_HOST, DATA_TEST)
 

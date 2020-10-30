@@ -91,7 +91,18 @@ db.get_collection(collection).count_documents(query)
 Actualizar la ip de un usuario nombre "Jervis"" y actualizarlo con "109.150.230.156/24" and comprobarlo haciendo una query.
 
 
-### Apartado 5
+## Apartado 5
+Buscar y sacar por consola los usuarios cuya latitud se mayor o igual que ﻿39.1457699 y la altitud menor que 37.114895
+
+## Apartado 6
+
+Crear un metodo que borre todos los elementos de la collecion users.
+Tip:
+```python
+db.get_collection(collection).delete_many(query)
+```
+
+### Apartado 6
 Realizar un map reduce q de la siguiente salida para ello podeis consultar: [Map Reduce PyMongo](https://api.mongodb.com/python/2.0/examples/map_reduce.html)
 ```bash
 {'_id': 'Female', 'value': 19.0}
