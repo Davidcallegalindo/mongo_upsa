@@ -10,7 +10,7 @@ def add_restaurant(mongo_host, data):
     :return:
     """
     client = MongoClient(mongo_host)
-    db = client['test']
+    db = client['test'] ## Se pone el nombre de la base de datos que se quiera usar
     inserted_id = db.my_restaurants.insert_one(data).inserted_id
     client.close()
     print("ID del restaurante creado ={}".format(inserted_id))
