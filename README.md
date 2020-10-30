@@ -12,9 +12,11 @@ Preparando el entorno
 ```bash
 
 python3 -m venv myvenv
+source myvenv/bin/activate
 pip install pymongo
 or
 pip install -r requirements.txt
+
 ```
 
 
