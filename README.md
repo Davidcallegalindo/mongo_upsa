@@ -21,7 +21,7 @@ pip install -r requirements.txt
 
 
 ### Apartado 1
-	Importar los datos a un base datos llamada upsa1 en la collecion users
+	Importar los datos a una base datos llamada upsa1 en la collecion users
 	Se puede usar mongoimport o este fragmento de código python (recomiendo usar el código para aprender a importar desde python)
 	
 ```python

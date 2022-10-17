@@ -1,23 +1,19 @@
-from pymongo import MongoClient
-
-
-
-def add_restaurant(mongo_host, data):
+def add_restaurant(client, data):
     """
     Add data
     :param mongo_host:
     :param data:
     :return:
     """
-    client = MongoClient(mongo_host)
-    db = client['test'] ## Se pone el nombre de la base de datos que se quiera usar
+
+    db = client['test']  ## Se pone el nombre de la base de datos que se quiera usar
     inserted_id = db.my_restaurants.insert_one(data).inserted_id
-    client.close()
+
     print("ID del restaurante creado ={}".format(inserted_id))
     return inserted_id
 
 
-def update_restaurant(mongo_host, id, data):
+def update_restaurant(client, id, data):
     """
     Update restaurant
     :param mongo_host:
@@ -25,35 +21,34 @@ def update_restaurant(mongo_host, id, data):
     :param data:
     :return:
     """
-    client = MongoClient(mongo_host)
+
     db = client['test']
     db.my_restaurants.update_one({'_id': id}, {"$set": data})
-    client.close()
 
-def get_restaurant(mongo_host, id):
+
+def get_restaurant(client, id):
     """
     Get a restaurant by id
     :param mongo_host:
     :param id:
     :return:
     """
-    client = MongoClient(mongo_host)
+
     db = client['test']
-    client.close()
     result = db.my_restaurants.find({'_id': id})
+    # 
     return result[0]
 
 
-def get_restaurant_with_query(mongo_host, query):
+def get_restaurant_with_query(client, query):
     """
     Executes the query
     :param mongo_host:
     :param query:
     :return:
     """
-    client = MongoClient(mongo_host)
-    db = client['test']
-    client.close()
-    results = db.my_restaurants.find(query)
-    return results
 
+    db = client['test']
+    results = db.my_restaurants.find(query)
+    # 
+    return results

@@ -1,0 +1,5 @@
+.idea/
+.python-version
+__main2__.py
+__pycache__/
+venv/
