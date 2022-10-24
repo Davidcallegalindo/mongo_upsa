@@ -1,11 +1,19 @@
 # Taller Práctico
 
+## Prerrequisitos
+ Python 3.8.x .
+Docker para levantar una instancia de mongo.
+
+```bash
+ docker-compose up -d
+```
+
 ## Introduction
 
 El objetivo de esta practica es comenzar a utilizar python con mongo, para ello usarermos una libreria llamada pymongo.
 Para ello importaremos datos mock sobre usuarios de una aplicación. Lo podeis encontrar en el fichero [MOCK_DATA.json](MOCK_DATA.json)
 
-Informacion UTIL para la práctica : [pymongo docs](https://api.mongodb.com/python/current/tutorial.html#making-a-connection-with-mongoclient)
+Informacion UTIL para la práctica : [pymongo docs](https://www.mongodb.com/docs/drivers/pymongo/)
 
 ### Apartado 0
 Preparando el entorno
@@ -106,10 +114,10 @@ db.get_collection(collection).delete_many(query)
 ```
 
 ### Apartado 7
-Realizar un map reduce q de la siguiente salida para ello podeis consultar: [Map Reduce PyMongo](https://api.mongodb.com/python/2.0/examples/map_reduce.html)
+Realizar un map reduce q de la siguiente salida para ello podeis consultar: [Aggregation pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/)
 ```bash
-{'_id': 'Female', 'value': 19.0}
-{'_id': 'Male', 'value': 14.0}
+{'_id': 'Female', 'count': 19.0}
+{'_id': 'Male', 'count': 14.0}
 ```
 
  
